@@ -1,0 +1,61 @@
+namespace dias
+{
+    public class program
+    {
+        public static void Main()
+        {
+            int Dia = 0;
+            int Mes = 0;
+            int Anyo = 0;
+            Console.WriteLine("Escriba el año por favor");
+            Anyo = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escriba el mes por favor");
+            Mes = Convert.ToInt32(Console.ReadLine());
+            if (Mes > 12)
+            {
+                Console.WriteLine(("El número sobrepasa la cantidad de meses en el año,escriba otro número por favor"));
+                Mes = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Escriba el dia por favor");
+            Dia = Convert.ToInt32(Console.ReadLine());
+
+            double Bisiesto = Anyo % 4;
+            Convert.ToDouble(Dia);
+            Convert.ToDouble(Mes);
+            
+            if (Bisiesto == 0 && Mes == 2 && Dia > 29)
+            {
+                Console.WriteLine(("El número sobrepasa la cantidad de dias del mes,escriba otro número por favor"));
+                dia = Convert.ToInt32(Console.ReadLine());
+            }
+          
+            
+            if (Bisiesto != 0 && Mes == 2 && Dia > 28)
+            {
+                Console.WriteLine(("El número sobrepasa la cantidad de dias del mes,escriba otro número por favor"));
+                Dia = Convert.ToInt32(Console.ReadLine());
+            }
+           
+            if ( Mes == 4 || Mes == 6 || Mes == 9 || Mes == 11 && Dia > 30)
+                {
+                Console.WriteLine(("El número sobrepasa la cantidad de dias del mes,escriba otro número por favor"));
+                Dia = Convert.ToInt32(Console.ReadLine());
+            }
+          
+            if ( Mes == 1 && Mes == 3 || Mes == 5 || Mes == 7 && Mes == 8 || Mes == 10 || Mes == 12 && dia > 31)
+            {
+                Console.WriteLine(("El numero sobrepasa la cantidad de dias del mes,escriba otro número por favor"));
+                dia = Convert.ToInt32(Console.ReadLine());
+            }
+
+            
+            DateTime miFecha = new DateTime(Anyo, Mes, Dia);
+            mifecha = miFecha.AddDays(1);
+
+            Console.WriteLine(miFecha);
+
+
+        }
+    }
+}
