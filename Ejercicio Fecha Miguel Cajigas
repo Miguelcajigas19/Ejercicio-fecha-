@@ -43,15 +43,15 @@ namespace dias
                 Dia = Convert.ToInt32(Console.ReadLine());
             }
           
-            if ( Mes == 1 && Mes == 3 || Mes == 5 || Mes == 7 && Mes == 8 || Mes == 10 || Mes == 12 && dia > 31)
+            if ( Mes == 1 && Mes == 3 || Mes == 5 || Mes == 7 && Mes == 8 || Mes == 10 || Mes == 12 && Dia > 31)
             {
                 Console.WriteLine(("El numero sobrepasa la cantidad de dias del mes,escriba otro número por favor"));
-                dia = Convert.ToInt32(Console.ReadLine());
+                Dia = Convert.ToInt32(Console.ReadLine());
             }
 
             
             DateTime miFecha = new DateTime(Anyo, Mes, Dia);
-            mifecha = miFecha.AddDays(1);
+            miFecha = miFecha.AddDays(1);
 
             Console.WriteLine(miFecha);
 
